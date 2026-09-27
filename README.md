@@ -19,10 +19,12 @@ O projeto usa a biblioteca [atvremote](https://github.com/drosoCode/atvremote)
 
 ### Clonar e configurar
 git clone https://github.com/IkaroHM/Controle-Remoto-Android-TV.git.
-Crie um .env e coloque o ip da sua tv(Seguindo o .envexample).
+Crie um .env na mesma pasta do executavel e coloque o ip da sua tv(Seguindo o .envexample).
 
 ### Rodar
-Go run . ou go build.
+Baixe o binário da versão mais recente.
+Depois, use chmod +x nome-do-binario para dar permissão de execução.
+Em seguida use ./nome-do-binario
 
 ### Criar certificados
 Usando a interface, aperte no botao "Criar certs" e depois no botao "Criar certificados".
