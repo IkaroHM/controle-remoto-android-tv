@@ -1,0 +1,80 @@
+:root {
+    --cor-fundo: #0a0a0a;
+    --cor-controle: #1a1a1a;
+    --cor-botao: #262626;
+    --cor-botao-hover: #333;
+    --cor-elemento-hover: #292929;
+    --cor-botao-ativo: #444;
+    --cor-texto: #fff;
+    --espaco: 1rem;
+    --espaco-menor: 0.25rem
+    --raio: 35px;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: system-ui, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--espaco);
+    gap: var(--espaco);
+}
+
+button{
+    font-weight: bold;
+    width: 20rem;
+    height: 10rem;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: var(--espaco);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.5rem;
+    transition: background-color 0.15s, transform 0.08s;
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0, 0.08);
+}
+
+button:hover{
+    background: var(--cor-botao-hover);
+}
+
+button:active{
+    transform: scale(0.95);
+    background: var(--cor-botao-ativo);
+}
+
+a{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+p{
+    color: rgb(17, 219, 142);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}

@@ -1,0 +1,187 @@
+:root {
+    --cor-fundo: #0a0a0a;
+    --cor-controle: #1a1a1a;
+    --cor-botao: #262626;
+    --cor-botao-hover: #333;
+    --cor-elemento-hover: #292929;
+    --cor-botao-ativo: #444;
+    --cor-texto: #fff;
+    --espaco: 1rem;
+    --espaco-menor: 0.25rem
+    --raio: 35px;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: system-ui, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--espaco);
+    gap: var(--espaco);
+}
+
+.controle{
+    position: relative;
+    width: 100%;
+    max-width: 50vh;
+    height: 100%;
+    background-color: var(--cor-controle);
+    padding: 24px 20px;
+    border-radius: 35px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--espaco);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0, 6);
+}
+
+
+button{
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: var(--raio);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: background-color 0.15s, transform 0.08s;
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0, 0.08);
+}
+
+button:hover{
+    background: var(--cor-botao-hover);
+}
+
+button:active{
+    transform: scale(0.95);
+    background: var(--cor-botao-ativo);
+}
+
+.dpad{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--espaco-menor);
+    aspect-ratio: 1;
+    width: 60%;
+    max-width: 45vh;
+    min-width: 20vh;
+    margin: 0 auto;
+}
+
+.dpad button{
+    font-size: 14px;
+}
+
+.dpad .up{grid-area: 1/2; border-radius: 12px 12px 4px 4px;}
+.dpad .down{grid-area: 3/2; border-radius: 12px 4px 12px 12px;}
+.dpad .ok{grid-area: 2/2; border-radius: 30%;background: #424242;}
+.dpad .ok:hover{
+    background-color: #505050;
+}
+.dpad .left{grid-area: 2/1; border-radius: 12px 12px 12px 4px;}
+.dpad .right{grid-area: 2/3; border-radius: 12px 4px 12px 4px;}
+
+.vol{
+    grid-area: 3/1;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 20vh;
+    max-width: 200px;
+    height: 20vh;
+    max-height: 200px;
+}
+
+.botaoVol{
+    width: 20vh;
+    max-width: 200px;
+    height: 20vh;
+    max-height: 200px;
+    border-radius: 35px;
+    font-size: 1.5rem;
+}
+
+#volIcon{
+    text-align: center;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: background-color 0.15s, transform 0.08s;
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0, 0.08);
+    margin: 10px auto;
+    width: 10vh;
+    max-width: 150px;
+    font-size: 1.3rem;
+}
+
+#volIcon:hover{
+    background: var(--cor-elemento-hover);
+}
+
+.painelNavegacao{
+    grid-area: 2/1;
+    margin-top: 3rem;
+    justify-self: center;
+    justify-content: center;
+    width: 20vh;
+    max-width: 200px;
+    height: 20vh;
+    max-height: 200px;
+}
+
+.botaoNavegacao{
+    width: 20vh;
+    max-width: 200px;
+    height: 10vh;
+    max-height: 200px;
+    border-radius: 35px;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+#botaoPaginaHome{
+    justify-content: center;
+    justify-self: center;
+    width: 15rem;
+    max-width: 200px;
+}
+
+a{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
